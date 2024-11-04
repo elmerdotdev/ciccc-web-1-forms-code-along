@@ -1,0 +1,23 @@
+.form {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+
+.box {
+  opacity: 0;
+  transition: all .3s ease-in-out;
+}
+
+#sleep {
+  display: none;
+}
+
+#sleep:checked ~ .box {
+  opacity: 1;
+}
+
+textarea {
+  width: 100%;
+}

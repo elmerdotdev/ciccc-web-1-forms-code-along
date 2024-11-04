@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+
+    <h1>Contact Us</h1>
+
+    <h2>Test POST</h2>
+    <form action="https://formtester.goodbytes.be/post.php" method="POST" class="form" enctype="multipart/form-data">
+      <fieldset>
+        <legend>Account Information</legend>
+        <div class="field">
+          <label for="username">Username:</label>
+          <input type="text" name="username" id="username" placeholder="Enter desired username...">
+        </div>
+        <div class="field">
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" required>
+        </div>
+        <div class="field">
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" placeholder="Enter email address" required>
+        </div>
+
+      </fieldset>
+
+      <fieldset>
+        <legend align="center">Personal Information</legend>
+        <div class="field">
+          <label for="fullname">Full Name:</label>
+          <input id="fullname" type="text" name="fullname" autocomplete="off" required>
+        </div>
+        <div class="field">
+          <label for="address">Address:</label>
+          <input id="address" type="text" name="address" autocomplete="off" placeholder="Enter address..." required>
+        </div>
+        <div class="field">
+          <label for="address2">Address 2:</label>
+          <input id="address2" type="text" name="address2" placeholder="Enter address..." required>
+        </div>
+        <div class="field">
+          <label for="bdate">Birthdate:</label>
+          <input type="date" name="bdate" id="bdate" min="2020-01-01" max="2025-12-31">
+        </div>
+        <div class="field">
+          <label for="btime">Birth time:</label>
+          <input type="time" name="btime" id="btime">
+        </div>
+        <div class="field">
+          <label for="first_friend">Met first friend:</label>
+          <input type="datetime-local" name="first_friend" id="first_friend">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend align="center">Educational Background</legend>
+        <div class="field">
+          <label for="">Educational Attainment:</label>
+          <input type="text" list="attainmentList" name="attainment" id="attainment">
+          <datalist id="attainmentList">
+            <option value="University"></option>
+            <option value="College"></option>
+            <option value="High School"></option>
+            <option value="Grade School"></option>
+            <option value="Pre-School"></option>
+          </datalist>
+        </div>
+        <div class="field">
+          <label for="highschool">High School:</label>
+          <input type="text" name="highschool" id="highschool" placeholder="Enter high school..." required>
+        </div>
+        <div class="field">
+          <label for="gradeschool">Grade School:</label>
+          <input type="text" name="gradeschool" id="gradeschool" autocomplete="off" placeholder="Enter grade school..." required>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Family Background</legend>
+        <div class="field">
+          <label for="father">Father's name:</label>
+          <input type="text" name="father" id="father" placeholder="Enter father's name..." required>
+        </div>
+        <div class="field">
+          <label for="mother">Mother's name:</label>
+          <input type="text" name="mother" id="mother" placeholder="Enter mother's name..." required>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Interests</legend>
+        <div class="field">
+          <label for="scuba">Scuba Diving</label>
+          <input type="checkbox" name="hobbies[]" value="Scuba Diving" id="scuba">
+          <label for="space_walking">Space walking</label>
+          <input type="checkbox" name="hobbies[]" value="Space Walking" id="space_walking">
+          <label for="underwater_golf">Underwater Golf</label>
+          <input type="checkbox" name="hobbies[]" value="Underwater Golf" id="underwater_golf">
+        </div>
+        <div class="field">
+          <label for="sleep">Do you like to sleep?</label>
+          <input type="checkbox" name="sleep" value="Yes" id="sleep">
+          <div class="box">I'm a box</div>
+        </div>
+        <div class="field">
+          <h3>Are you a morning or night person?</h3>
+          <label for="morning">Morning</label>
+          <input type="radio" name="person" id="morning" value="Morning" checked>
+          <label for="night">Night</label>
+          <input type="radio" name="person" id="night" value="Night">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Preferences</legend>
+        <div class="field">
+          <label for="theme_color">Theme Color:</label>
+          <input type="color" name="theme_color" id="theme_color">
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Attachments</legend>
+        <label for="resume">Resume:</label>
+        <input type="file" name="resume" id="resume" accept=".pdf">
+
+        <div class="field">
+          <label for="feedback">Feedback</label>
+          <textarea name="feedback" id="feedback" rows="3" placeholder="What did you want to say?"></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Communication</legend>
+        <label for="message">Preferred communication:</label>
+        <select name="message" id="message">
+          <optgroup label="Digital">
+            <option value="email">Email</option>
+            <option value="sms" disabled>Text</option>
+          </optgroup>
+          <optgroup label="Physical">
+            <option value="mail" selected>Mail</option>
+          </optgroup>
+        </select>
+        <div class="field">
+          <label for="search">Search Website</label>
+          <input type="search" name="search" id="search" placeholder="Search...">
+          <button>Search</button>
+        </div>
+        <div class="field">
+          <label for="age">Age</label>
+          <input type="range" name="age" id="age" min="0" max="50" step="10">
+        </div>
+      </fieldset>
+
+      <div class="field-submit">
+        <button type="submit">Submit Data</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+
+  </div>
+</body>
+</html>
